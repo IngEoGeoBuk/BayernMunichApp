@@ -1,10 +1,20 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity, Linking, Image } from 'react-native'
+import MatchHome from './Home/MatchHome'
 
 const Store = () => {
     return (
         <View style={styles.container}>
-            <Text>Store</Text>
+            <Image 
+                style={{ width:300, height: 200, resizeMode: 'contain' }}
+                source={{ uri: "https://i.esdrop.com/d/JPGgO9G2Pk.gif" }}
+            />
+            <TouchableOpacity
+                style={styles.button}
+                onPress={() => Linking.openURL('https://github.com/IngEoGeoBuk')}
+            >
+                <Text style={styles.text}>Go to Shop</Text>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -17,6 +27,15 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         flex: 1,
+    },
+    button: {
+        backgroundColor: "rgb(204, 0, 51)",
+        borderRadius: 8,
+        padding: 15
+    },
+    text: {
+        color: 'white',
+        fontSize: 20,
     },
 })
 

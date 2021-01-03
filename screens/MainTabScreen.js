@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { StyleSheet, View, Image, Button, Text, StatusBar } from 'react-native';
+import { StyleSheet, View, Image, Button, Text, StatusBar, Linking } from 'react-native';
 
 import Home from './Home';
 import Teams from './Teams';
@@ -60,6 +60,7 @@ const MainTabScreen = () => (
         />
         <Tab.Screen
             name="Store"
+            onPress={() => Linking.openURL('https://github.com/IngEoGeoBuk')}
             component={StoreStackScreen}
             options={{
             tabBarLabel: 'Store',

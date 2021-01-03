@@ -86,7 +86,7 @@ function Splash({navigation}) {
 
 function DrawerRoutes() {
   return (
-    <Drawer.Navigator drawerContent={props => <DrawerContent {...props} /> } initialRouteName="Home">
+    <Drawer.Navigator drawerContent={props => <DrawerContent {...props} /> } initialRouteName="Home" >
       <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
       <Drawer.Screen name="History" component={HistoryStackScreen} />
       <Drawer.Screen name="About" component={AboutStackScreen} />

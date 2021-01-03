@@ -1,14 +1,17 @@
 import React from 'react'
 import { StyleSheet, Text, View, ScrollView } from 'react-native'
-import MatchBox from './Match/MatchBox'
+import MatchBox from '../Match/MatchBox'
 
 const Bayern = "https://i.esdrop.com/d/nW1USMQyuT.png"
 
-const Match = () => {
+const MatchHome = () => {
     return (
         <View style={styles.container}>
-            <ScrollView>
-            <Text>&nbsp;</Text>
+            <ScrollView
+                pagingEnabled 
+                horizontal 
+                showsHorizontalScrollIndicator={false}
+            >
             <Text>
                 <MatchBox
                     league="Champions League"
@@ -58,7 +61,7 @@ const Match = () => {
     )
 }
 
-export default Match
+export default MatchHome
 
 const styles = StyleSheet.create({
     container: {

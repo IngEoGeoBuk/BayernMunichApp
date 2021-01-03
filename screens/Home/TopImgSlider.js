@@ -4,6 +4,7 @@ import { View, Image, ScrollView, Dimensions, Text, StyleSheet, ImageBackground 
 // https://www.youtube.com/watch?v=otr_x0wKgvU&ab_channel=microcode
 // const { width } = Dimensions.get('window');
 const width = Dimensions.get('window').width / 1.2;
+// const { width } = Dimensions.get('window');
 const height = width * 1.2;
 
 const datas = [
@@ -49,7 +50,8 @@ const TopImgSlider = () => {
                 horizontal 
                 onScroll={change}
                 showsHorizontalScrollIndicator={false}
-                style={styles.scroll}>
+                style={styles.scroll}
+            >
             {
                 datas.map((data, index) => (
                     <ImageBackground source={{ uri: data.image }}
