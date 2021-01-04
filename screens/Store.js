@@ -1,10 +1,11 @@
 import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity, Linking, Image } from 'react-native'
-import MatchHome from './Home/MatchHome'
+import { globalStyles } from '../styles/Styles';
 
 const Store = () => {
     return (
         <View style={styles.container}>
+            <Text>Let's Go Shopping ^^</Text>
             <Image 
                 style={{ width:300, height: 200, resizeMode: 'contain' }}
                 source={{ uri: "https://i.esdrop.com/d/JPGgO9G2Pk.gif" }}
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     button: {
-        backgroundColor: "rgb(204, 0, 51)",
+        backgroundColor: globalStyles.munichRed,
         borderRadius: 8,
         padding: 15
     },

@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, Image } from 'react-native'
 import { Text } from 'react-native-paper';
+import { globalStyles } from '../../styles/Styles';
 
 const MatchBox = ({ league, day, team1, team2, 
     matchpoint1, matchpoint2, matchsemi }) => {
@@ -71,7 +72,7 @@ const styles = StyleSheet.create({
     Top1 : {
         fontWeight: 'bold',
         fontSize: 13,
-        color: "rgb(0, 47, 108)"
+        color: globalStyles.munichBlue,
     },
     Top1Champs: { 
         fontWeight: 'bold',
@@ -80,7 +81,7 @@ const styles = StyleSheet.create({
     },
     Top2 : {
         fontSize: 13,
-        color: "rgb(0, 47, 108)"
+        color: globalStyles.munichBlue,
     },
     Top2Champs : {
         fontSize: 13,
@@ -96,10 +97,10 @@ const styles = StyleSheet.create({
         alignContent: 'center',
         fontSize: 25,
         padding: 10,
-        color: "rgb(0, 47, 108)"
+        color: globalStyles.munichBlue,
     },
     matchPointChamps: {
-        backgroundColor: 'black',
+        backgroundColor: 'rgb(30, 0, 0)',
         borderWidth: 1,
         borderColor: 'white',
         borderRadius: 15,
@@ -114,20 +115,20 @@ const styles = StyleSheet.create({
     matchCenter: {
         backgroundColor: 'rgb(241, 242, 244)',
         borderRadius: 15,
-        fontSize: 20,
+        fontSize: 17,
         padding: 8
     },
     matchCenterChamps: {
-        backgroundColor: 'black',
+        backgroundColor: 'rgb(30, 0, 0)',
         color: 'white',
         borderWidth: 1,
         borderColor: 'white',
         borderRadius: 15,
-        fontSize: 20,
+        fontSize: 17,
         padding: 8
     },
     matchBottom: {
-        color: "rgb(0, 47, 108)",
+        color: globalStyles.munichBlue,
         fontWeight: 'bold',
         bottom: 10, 
     },

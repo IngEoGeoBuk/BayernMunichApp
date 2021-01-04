@@ -12,6 +12,8 @@ import About from './About';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
+import { globalStyles } from '../styles/Styles';
+
 const HomeStack = createStackNavigator();
 const MatchStack = createStackNavigator();
 const TeamsStack = createStackNavigator();
@@ -24,7 +26,7 @@ const MainTabScreen = () => (
     <Tab.Navigator
       initialRouteName="Home"
       tabBarOptions={{
-        activeTintColor: 'rgb(204, 0, 51)',
+        activeTintColor: globalStyles.munichRed,
       }}
     >
         <Tab.Screen
@@ -76,7 +78,7 @@ export default MainTabScreen;
 
     const headerStyle = {
         headerStyle: {
-            backgroundColor: "rgb(204, 0, 51)",
+            backgroundColor: globalStyles.munichRed,
         },
         headerTintColor: "#fff",
         headerTitleStyle: {
@@ -94,8 +96,9 @@ export default MainTabScreen;
         <HomeStack.Screen name="FC BAYERN" component={Home} options = {{ 
             headerLeft: () => (
             <View style={{ display:'flex', flexDirection:'row' }}>
-                <Icon.Button name="ios-menu" size={25} backgroundColor="rgb(204, 0, 51)"
-                onPress={() => navigation.openDrawer()}>
+                <Icon.Button name="ios-menu" size={25} onPress={() => navigation.openDrawer()}
+                style={{ backgroundColor:globalStyles.munichRed }}
+                >
                 </Icon.Button>
                 <Image
                 style={styles.logoHeader}
@@ -118,8 +121,9 @@ export default MainTabScreen;
     <MatchStack.Navigator screenOptions = {headerStyle} >
       <MatchStack.Screen name="Match" component={Match} options = {{ 
         headerLeft: () => (
-          <Icon.Button name="ios-menu" size={25} backgroundColor="rgb(204, 0, 51)"
-          onPress={() => navigation.openDrawer()}>
+          <Icon.Button name="ios-menu" size={25} onPress={() => navigation.openDrawer()}
+          style={{ backgroundColor: globalStyles.munichRed }}
+          >
           </Icon.Button>
         ),
         headerRight: () => (
@@ -137,8 +141,9 @@ export default MainTabScreen;
     <TeamsStack.Navigator screenOptions = {headerStyle} >
       <TeamsStack.Screen name="Teams" component={Teams} options = {{ 
         headerLeft: () => (
-          <Icon.Button name="ios-menu" size={25} backgroundColor="rgb(204, 0, 51)"
-          onPress={() => navigation.openDrawer()}>
+          <Icon.Button name="ios-menu" size={25} onPress={() => navigation.openDrawer()}
+          style={{ backgroundColor: globalStyles.munichRed }}
+          >
           </Icon.Button>
         ),
         headerRight: () => (
@@ -156,8 +161,9 @@ export default MainTabScreen;
     <StoreStack.Navigator screenOptions = {headerStyle} >
       <StoreStack.Screen name="Store" component={Store} options = {{ 
         headerLeft: () => (
-          <Icon.Button name="ios-menu" size={25} backgroundColor="rgb(204, 0, 51)"
-          onPress={() => navigation.openDrawer()}>
+          <Icon.Button name="ios-menu" size={25} onPress={() => navigation.openDrawer()}
+          style={{ backgroundColor: globalStyles.munichRed }}
+          >
           </Icon.Button>
         ),
         headerRight: () => (

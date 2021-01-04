@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import { Text } from 'react-native-paper';
+import { globalStyles } from '../styles/Styles';
 
 const About = () => {
     return (
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     middle: {
-        color: "rgb(0, 47, 108)",
+        color: globalStyles.munichBlue,
         fontSize: 30,
         fontWeight: 'bold',
     },

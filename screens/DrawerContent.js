@@ -3,6 +3,7 @@ import { StyleSheet, View, Image, Linking } from 'react-native';
 import { Avatar, Drawer, Title } from 'react-native-paper';
 import { DrawerItem, DrawerContentScrollView } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { globalStyles } from '../styles/Styles';
 
 export function DrawerContent(props) {
 
@@ -120,7 +121,7 @@ const styles = StyleSheet.create({
     },
     userInfoSection: {
         paddingLeft: 20,
-        backgroundColor: "rgb(204, 0, 51)",
+        backgroundColor: globalStyles.munichRed,
         top: -4,
         display: 'flex',
         flexDirection: 'row'

@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { DrawerContent } from './screens/DrawerContent';
+import { globalStyles } from './styles/Styles';
 
 import MainTabScreen from './screens/MainTabScreen';
 import History from './screens/History';
@@ -18,7 +19,7 @@ const AboutStack = createStackNavigator();
 
 const headerStyle = {
   headerStyle: {
-      backgroundColor: "rgb(204, 0, 51)",
+      backgroundColor: globalStyles.munichRed,
   },
   headerTintColor: "#fff",
   headerTitleStyle: {
@@ -35,8 +36,9 @@ const HistoryStackScreen = ({navigation}) => (
   <HistoryStack.Navigator screenOptions = {headerStyle} >
     <HistoryStack.Screen name="History" component={History} options = {{ 
       headerLeft: () => (
-        <Icon.Button name="ios-menu" size={25} backgroundColor="rgb(204, 0, 51)"
-        onPress={() => navigation.openDrawer()}>
+        <Icon.Button name="ios-menu" size={25} onPress={() => navigation.openDrawer()}
+        style={{ backgroundColor: globalStyles.munichRed }}
+        >
         </Icon.Button>
       ),
       headerRight: () => (
@@ -54,8 +56,9 @@ const AboutStackScreen = ({navigation}) => (
   <AboutStack.Navigator screenOptions = {headerStyle} >
     <AboutStack.Screen name="About" component={About} options = {{ 
       headerLeft: () => (
-        <Icon.Button name="ios-menu" size={25} backgroundColor="rgb(204, 0, 51)"
-        onPress={() => navigation.openDrawer()}>
+        <Icon.Button name="ios-menu" size={25} onPress={() => navigation.openDrawer()}
+        style={{ backgroundColor: globalStyles.munichRed }}
+        >
         </Icon.Button>
       ),
       headerRight: () => (
@@ -97,7 +100,7 @@ function DrawerRoutes() {
 export default function App() {
   return (
     <NavigationContainer>
-      <StatusBar barStyle="light-content" backgroundColor='rgb(204, 0, 51)'/>
+      <StatusBar barStyle="light-content" style={{ backgroundColor: globalStyles.munichRed  }} />
       <Stack.Navigator headerMode="none">
         <Stack.Screen name="Splash" component={Splash}
           options={{
@@ -114,7 +117,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'rgb(204, 0, 51)',
+    backgroundColor: globalStyles.munichRed,
     alignItems: 'center',
     justifyContent: 'center',
   },

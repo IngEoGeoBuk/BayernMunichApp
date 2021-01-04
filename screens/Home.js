@@ -3,6 +3,8 @@ import { StyleSheet, View, Image, ScrollView } from 'react-native'
 import TopImgSlider from './Home/TopImgSlider';
 import { Text } from 'react-native-paper';
 import MatchHome from './Home/MatchHome';
+import { globalStyles } from '../styles/Styles';
+import News from './Home/News';
 
 const Home = () => {
     return (
@@ -12,7 +14,7 @@ const Home = () => {
                 <View style={{ alignItems: 'center' }}>
                     <Text>
                         {"\n"}{"\n"}
-                        <Text style={{ color: "rgb(0, 47, 108)" }}>
+                        <Text style={{ color: globalStyles.munichBlue }}>
                             PRESENTED BY&nbsp; 
                         </Text>
                         <Image 
@@ -23,6 +25,10 @@ const Home = () => {
                     <Text>&nbsp;</Text>
                 </View>
                 <MatchHome/>
+                <Text>&nbsp;</Text>
+                <Text style={{ color: globalStyles.munichBlue, fontSize: 20, fontWeight: 'bold', right: 140 }}>NEWS</Text>
+                <News/>
+                <Text>&nbsp;</Text>
             </View>
         </ScrollView>
     )
