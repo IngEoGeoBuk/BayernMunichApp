@@ -14,7 +14,7 @@ const Match = () => {
                     league="Champions League"
                     day="Matchday 6 | 10/12/2020, 5:00 am"
                     team1={Bayern}
-                    team2="https://i.esdrop.com/d/YHz6ixbck0.png"
+                    team2="https://i.esdrop.com/d/vq8JWjBZXU.png"
                     matchpoint1="2"
                     matchpoint2="0"
                     matchsemi="(0:0)"
